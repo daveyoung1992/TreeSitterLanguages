@@ -6,6 +6,6 @@ public extension TreeSitterLanguage {
     static var latex: TreeSitterLanguage {
         let highlightsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterLaTeXQueries.Query.highlightsFileURL)
         let injectionsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterLaTeXQueries.Query.injectionsFileURL)
-        return TreeSitterLanguage(tree_sitter_latex(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery)
+        return TreeSitterLanguage("LaTeX", language:tree_sitter_latex(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery)
     }
 }

@@ -10,7 +10,7 @@ public extension TreeSitterLanguage {
             TreeSitterCQueries.Query.highlightsFileURL,
             TreeSitterCPPQueries.Query.highlightsFileURL
         ])
-        return TreeSitterLanguage(tree_sitter_cpp(), highlightsQuery: highlightsQuery)
+        return TreeSitterLanguage("C++", language:tree_sitter_cpp(), highlightsQuery: highlightsQuery)
     }
 }
 

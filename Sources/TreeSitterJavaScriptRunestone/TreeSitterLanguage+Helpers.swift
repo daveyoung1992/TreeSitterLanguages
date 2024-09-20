@@ -7,7 +7,7 @@ public extension TreeSitterLanguage {
     static var javaScript: TreeSitterLanguage {
         let highlightsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterJavaScriptQueries.Query.highlightsFileURL)
         let injectionsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterJavaScriptQueries.Query.injectionsFileURL)
-        return TreeSitterLanguage(tree_sitter_javascript(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .javaScript)
+        return TreeSitterLanguage("JavaScript", language:tree_sitter_javascript(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .javaScript)
     }
 
     static var jsx: TreeSitterLanguage {
@@ -16,7 +16,7 @@ public extension TreeSitterLanguage {
             TreeSitterJavaScriptQueries.Query.highlightsJSXFileURL
         ])
         let injectionsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterJavaScriptQueries.Query.injectionsFileURL)
-        return TreeSitterLanguage(tree_sitter_javascript(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .javaScript)
+        return TreeSitterLanguage("Jsx", language:tree_sitter_javascript(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .javaScript)
     }
 }
 

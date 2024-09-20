@@ -6,6 +6,6 @@ public extension TreeSitterLanguage {
     static var json5: TreeSitterLanguage {
         let highlightsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterJSON5Queries.Query.highlightsFileURL)
         let injectionsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterJSON5Queries.Query.injectionsFileURL)
-        return TreeSitterLanguage(tree_sitter_json5(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .json5)
+        return TreeSitterLanguage("Json5", language:tree_sitter_json5(), highlightsQuery: highlightsQuery, injectionsQuery: injectionsQuery, indentationScopes: .json5)
     }
 }
